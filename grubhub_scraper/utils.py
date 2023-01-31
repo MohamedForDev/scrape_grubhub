@@ -1,15 +1,8 @@
-import hashlib
 import traceback
 from urllib import response
-import math
 import traceback
 from datetime import datetime
-import hashlib
-import mysql.connector as mariadb
-import sys
 
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 import requests
 from lxml.html import fromstring
 import asyncio
