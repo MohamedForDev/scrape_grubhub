@@ -5,7 +5,7 @@ import traceback
 from datetime import datetime, timedelta
 from flask import request, jsonify
 
-from grubhub_scraper.utils import save_html_page,request_get,get_sellenium_driver,scrape
+from grubhub_scraper.utils import scrape
 from grubhub_scraper import app
 
 import asyncio
