@@ -1,9 +1,9 @@
 from flask import Flask ,g
-from grubhub_scraper import app as chat_bot_ap
+from grubhub_scraper import app as grubhub_scraper_app
 app = Flask(__name__)
 
 
-app.register_blueprint(chat_bot_ap)
+app.register_blueprint(grubhub_scraper_app)
 
 if __name__ == "__main__":
     app.config["DEBUG"] = True
