@@ -1,6 +1,7 @@
 requirements: python 3.9 is installed
 
 How to run the project:
+change the executablePath of chrome in \grubhub_scraper\utils.py line 38 by your proper executablePath of chrome 
 # install dependancies
 
 pip install -r requirements.txt
