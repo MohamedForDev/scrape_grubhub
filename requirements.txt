@@ -1,0 +1,7 @@
+pyppeteer==1.0.2
+pyppeteer_stealth==2.7.4
+blinker==1.4
+lxml==4.9.2
+Flask==1.1.2
+Flask-HTTPAuth==4.1.0
+Flask-JSON==0.3.4
