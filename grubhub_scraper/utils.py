@@ -211,45 +211,7 @@ def save_html_page(page_source):
 	helloFile.close()
 
 
-def get_sellenium_driver():
-    chrome_options = Options()
-    #chrome_options.add_argument("--headless")
-    chrome_options.add_argument("--remote-debugging-port=9230")
-    driver = webdriver.Chrome('./chromedriver', chrome_options=chrome_options)
-    return driver
-def request_get(url,headers):
 
-	status_code = 0
-	cpt = 0
-	while status_code !=200 and cpt < 4:
-		try:
-			headers = {
-				"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 Edg/108.0.1462.76",
-				"Connection": "keep-alive"
-			}
-			print("inside")
-			response = requests.get(url,headers=headers)
-			print("finished")
-			status_code = response.status_code
-
-
-			print("status_code",status_code)
-			if cpt < 4 and status_code !=200:
-				cpt +=1
-			elif status_code==200:
-				print("here to save")
-				content=response.content.decode(response.encoding if response.encoding else 'utf-8')
-				save_html_page(content)
-				print("saved")
-
-				as_html = fromstring(content)
-				return as_html
-		except:
-			import traceback
-			print(traceback.format_exc())
-			continue
-
-	return ""
 
 
 
